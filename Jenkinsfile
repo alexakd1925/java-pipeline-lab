@@ -51,7 +51,7 @@ pipeline {
         failure {
             echo '¡ERROR! La compilación o las pruebas fallaron. Revisa los logs de Maven.'
         }
-        always {
+        cleanup {
             echo 'Limpiando el espacio de trabajo para no saturar el servidor...'
             deleteDir()
         }
